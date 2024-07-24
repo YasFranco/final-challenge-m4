@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "ts-node ./src/database/database.ts",
+    "dev": "ts-node ./src/model/model.ts",
     "client": "ts.node ./src/client.ts"
   },
   "keywords": [],
