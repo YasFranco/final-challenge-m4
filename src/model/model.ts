@@ -1,6 +1,6 @@
 import { getData } from "../database/database";
 
-class Character {
+class DisneyModel {
 
     async  getAllCharacters () {
         const character = await getData("character")
@@ -37,4 +37,8 @@ class Character {
 
 }
 
-const characters = new Character()
+const characters = new DisneyModel();
+
+const { getAllCharacters, getCharacterByName, getCharactersById } = characters;
+
+export { getAllCharacters, getCharactersById, getCharacterByName }
