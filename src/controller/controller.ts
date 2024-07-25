@@ -5,12 +5,12 @@ class DisneyController {
         return await getAllCharacters()
     }
 
-    async getCharacterByName() {
-        return await getCharacterByName("");
+    async getCharacterByName(name: string) {
+        return await getCharacterByName(name);
     }
 
-    async getCharactersById() {
-        return await getCharactersById(1);
+    async getCharactersById(id: number) {
+        return await getCharactersById(id);
     }
 }
 
