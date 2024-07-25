@@ -1,4 +1,5 @@
 import { getData } from "../database/database";
+import { Messages } from "../utils/messages";
 
 class DisneyModel {
 
@@ -14,9 +15,9 @@ class DisneyModel {
 
         const foundCharacter = characters.find((c:any) => c._id === id)
         if(!foundCharacter){
-            console.log("Personaje no encontrado")
+            return { data: null, message: Messages.NOT_FOUND}
         }else {
-             console.log(foundCharacter)
+             return foundCharacter
         }
     }
 
@@ -28,9 +29,9 @@ class DisneyModel {
         const searchByName = characters.filter((c:any) => c.name.toLowerCase().includes(nameLowerCase))
 
         if(!searchByName){
-            console.log("Personaje no encontrado")
+            return { data: null, message: Messages.NOT_FOUND};
         }else {
-             console.log(searchByName)
+             return searchByName;
         }
     }
     
